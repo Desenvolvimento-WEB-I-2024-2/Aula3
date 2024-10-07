@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Validação</title>
+    <!-- Link para o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link para o arquivo CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Formulário de Cadastro</h2>
+    <form id="meuFormulario" novalidate>
+        <!-- Nome -->
+        <div class="form-group">
+            <label for="nome">Nome Completo *</label>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            <div class="invalid-feedback">
+                Por favor, insira um nome válido (apenas letras).
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@dominio.com" required>
+            <div class="invalid-feedback">
+                Por favor, insira um email válido.
+            </div>
+        </div>
+
+        <!-- Senha -->
+        <div class="form-group">
+            <label for="senha">Senha *</label>
+            <input type="password" class="form-control" id="senha" name="senha" placeholder="Mínimo 8 caracteres, incluindo números e letras" required>
+            <div class="invalid-feedback">
+                A senha deve ter no mínimo 8 caracteres, incluindo números e letras.
+            </div>
+        </div>
+
+        <!-- Confirmação de Senha -->
+        <div class="form-group">
+            <label for="confirmarSenha">Confirmar Senha *</label>
+            <input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha" required>
+            <div class="invalid-feedback">
+                As senhas não correspondem.
+            </div>
+        </div>
+
+        <!-- Telefone -->
+        <div class="form-group">
+            <label for="telefone">Telefone *</label>
+            <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+            <div class="invalid-feedback">
+                Por favor, insira um telefone válido no formato (XX) XXXXX-XXXX.
+            </div>
+        </div>
+
+        <!-- CPF -->
+        <div class="form-group">
+            <label for="cpf">CPF *</label>
+            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" required>
+            <div class="invalid-feedback">
+                Por favor, insira um CPF válido.
+            </div>
+        </div>
+
+        <!-- Botão de Submissão -->
+        <button id="btn-submit" type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+</div>
+
+<!-- Scripts JavaScript -->
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
